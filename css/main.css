@@ -8,56 +8,54 @@
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* FLOAT CLEARFIX */
 .clearfix::after {
-    content: '';
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .float--left {
-    float: left;
+  float: left;
 }
 
 .float--right {
-    float: right;
+  float: right;
 }
 
 /* SUMARRY */
 .summary {
-    
 }
 .summary__title {
-    font-size: 38px;
-    font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 18px;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 18px;
 }
-.summary__desctiption {
-    font-size: 26px;
-    font-weight: 300;
-    color: #767676;
-    line-height: 1.5;
+.summary__description {
+  font-size: 26px;
+  font-weight: 300;
+  color: #767676;
+  line-height: 1.5;
 }
 
 /* SECTION & INNER */
 .section {
-
-    /* inner를 사용하지 않는 경우 section 에서 absolute 가 1차적으로 걸리게 relative를 준다. */
-    position: relative;
+  /* inner를 사용하지 않는 경우 section 에서 absolute 가 1차적으로 걸리게 relative를 준다. */
+  position: relative;
 }
-.section .inner{
-    max-width: 980px;
+.section .inner {
+  max-width: 980px;
 
-    /* marin 0 auto 를 사용하기 위해서는 width 가 정해져 있어야 한다. */
-    margin: 0 auto;
-    box-sizing: border-box;
-    
-    /* inner에서 absolute 가 1차적으로 걸리게 relative를 준다. */
-    position: relative;
+  /* marin 0 auto 를 사용하기 위해서는 width 가 정해져 있어야 한다. */
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  /* inner에서 absolute 가 1차적으로 걸리게 relative를 준다. */
+  position: relative;
 }
 
 /* ------- btn ------- */
@@ -104,182 +102,222 @@ a {
 
 /* ------- input text -------*/
 .input--text {
-    height: 34px;
-   padding: 0 10px;
-   box-sizing; border-box;
-   border: 1px solid #ddd;
-   border-radius: 5px;
-   outline: none;
-   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
-   font-size: 16px;
- }
- 
- /* 
+  height: 34px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  font-size: 16px;
+}
+
+/* 
  Vendor Prefix (브라우저 업체별 접두사) - 실험적인 기능을 해당 브라우저에서 사용할 수 있다. 
  */
- .input--text::-webkit-input-placeholder {
-   color: #cacaca;
- }
- .input--text::-ms-input-placeholder {
-   color: #cacaca;
- }
- .input--text::-moz-input-placeholder {
-   color: #cacaca;
- }
- 
- .input--text:focus {
-   border-color: #51a7e8;
-   /* 아래와 같이 하면 기본 설정되어 있는 그림자 + 포커스 되었을 떄 쓸 그림자를 설정 할 수 있다.   */
-   box-shadow: 
-     inset 0 1px 2px rgba(0,0,0,0.075), 
-     0 0 5px rgba(81, 167, 232, 0.5);
- }
+.input--text::-webkit-input-placeholder {
+  color: #cacaca;
+}
+.input--text::-ms-input-placeholder {
+  color: #cacaca;
+}
+.input--text::-moz-input-placeholder {
+  color: #cacaca;
+}
 
+.input--text:focus {
+  border-color: #51a7e8;
+  /* 아래와 같이 하면 기본 설정되어 있는 그림자 + 포커스 되었을 떄 쓸 그림자를 설정 할 수 있다.   */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+    0 0 5px rgba(81, 167, 232, 0.5);
+}
 
 /* HEADER */
 header {
-    border-bottom: 1px solid rgba(0, 0, 0, .75);
-    box-shadow: 0 0 5px rgba(0, 0, 0, .75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
 
-    /* 브라우저마다 다르게 해석 할 수 있으므로 white와 같이 사용하지 않고 hexa 코드를 사용한다. */
-    background: #fff;
+  /* 브라우저마다 다르게 해석 할 수 있으므로 white와 같이 사용하지 않고 hexa 코드를 사용한다. */
+  background: #fff;
 }
 
 header .inner {
-    height: 78px;
+  height: 78px;
 }
 
 header .menu-group {
-    display: flex;
-    /* 부모인 inner 높이에 영향을 받게된다. */
-    height: 100%;
-    align-items: center;
-
+  display: flex;
+  /* 부모인 inner 높이에 영향을 받게된다. */
+  height: 100%;
+  align-items: center;
 }
 
 header .logo {
-    margin-right: 10px; 
+  margin-right: 10px;
 }
 
 header .logo a {
-    display: block;
-    background: url('../img/logo.svg');
-    width: 32px;
-    height: 32px;
+  display: block;
+  background: url("../img/logo.svg");
+  width: 32px;
+  height: 32px;
 
-    /* background로 이미지를 삽입 할 경우, 대체 텍스트를 설정할 수 없으므로 a 태그의 텍스를 지워서는 안된다. */
-    /* 화면에서는 사라졌지만 구조적으로는 남아있다. */
-    /* 9999는 요소를 사라지게 하기 위한 약속된 값이다. */
-    text-indent: -9999px;
+  /* background로 이미지를 삽입 할 경우, 대체 텍스트를 설정할 수 없으므로 a 태그의 텍스를 지워서는 안된다. */
+  /* 화면에서는 사라졌지만 구조적으로는 남아있다. */
+  /* 9999는 요소를 사라지게 하기 위한 약속된 값이다. */
+  text-indent: -9999px;
 }
 
 header .logo a:hover {
-    background: url('../img/logo_on.svg');
+  background: url("../img/logo_on.svg");
 }
 
-
-header .main-menu  {
-    display: flex;
+header .main-menu {
+  display: flex;
 }
 
 header .main-menu li a {
-    /* inline 요소는 범위를 가질 수 없다. 따라서 block 으로 변경한다. */
-    display: block;
-    /* 여백을 확보해서 클릭을 쉽게 만들기 */
-    /* li에 주면 안되고 a 태그에 줘야한다. */
-    padding: 10px;
-    color: #3c4146;
+  /* inline 요소는 범위를 가질 수 없다. 따라서 block 으로 변경한다. */
+  display: block;
+  /* 여백을 확보해서 클릭을 쉽게 만들기 */
+  /* li에 주면 안되고 a 태그에 줘야한다. */
+  padding: 10px;
+  color: #3c4146;
 }
 
 header .main-menu li a:hover {
-    color: #4078c5;
+  color: #4078c5;
 }
 
 header .sign-group {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 header .btn-group {
-    order: 2;
-    display: flex;
+  order: 2;
+  display: flex;
 }
 
 header .btn-group .sign-in {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 #search-form {
-    order: 1;
-    margin-right: 12px;
+  order: 1;
+  margin-right: 12px;
 }
 
 #search {
-    width: 160px;
-    font-size: 14px;
+  width: 160px;
+  font-size: 14px;
 }
 /* + : 형제 선택자 */
 /* [] : 속성 선택자 */
-#search + [type=submit] {
-    display: none;;
+#search + [type="submit"] {
+  display: none;
 }
 
 header .sub-menu {
-    /* order default 0 */
-    order: 0;
-    display: flex;
-    margin-right: 12px;
-
+  /* order default 0 */
+  order: 0;
+  display: flex;
+  margin-right: 12px;
 }
 
 header .sub-menu li a {
-   display: block;
-   padding: 8px;
-   color: #3c4146;
-   font-size: 13px;
+  display: block;
+  padding: 8px;
+  color: #3c4146;
+  font-size: 13px;
 }
 
 header .sub-menu li a:hover {
-    color: #4078c0;
+  color: #4078c0;
 }
-
 
 /* VISUAL */
 .section__visual {
-    background-image: url('../img/bg.jpg');
-    background-repeat: no-repeat;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
 
-    /* default: top left */
-    background-position: bottom left;
+  /* default: top left */
+  background-position: bottom left;
 
-    /* 확대, 축소를 해도 이미지를 꽉 채워야 한다. */
-    background-size: cover;
+  /* 확대, 축소를 해도 이미지를 꽉 채워야 한다. */
+  background-size: cover;
 }
 
 .section__visual::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.3);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .section__visual .inner {
-    /* height 를 주기 전에 padding을 먼저 생각하자. */
-    padding: 160px 0px;
+  /* height 를 주기 전에 padding을 먼저 생각하자. */
+  padding: 160px 0px;
+
+  display: flex;
+}
+
+.section__visual .summary {
+  /* 이전에 있던 flex 성질을 flex-basis로  auto-->0으로 초기화 시키고 flex-grow로 영역을 채워준다. */
+  /* 단축 속성 flex: grow shrink basis */
+  /* 단축 속성을 사용하면  basis 는 0이 된다.*/
+  /* flex-grow: 1;
+  flex-basis: 0; */
+  flex: 1;
+
+  margin-right: 90px;
 }
 
 .section__visual .summary__title {
-    font-size: 54px;
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 1px 20px rgba(0, 0, 0, .75);
+  font-size: 54px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 20px rgba(0, 0, 0, 0.75);
 }
 .section__visual .summary__description {
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 1px 20px rgba(0, 0, 0, .75);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 1px 20px rgba(0, 0, 0, 0.75);
 }
 
+#sign-form {
+  /* 한 번에 width를 잡을 수 있게 구조화 해야 한다. */
+  width: 340px;
+  margin-top: 16px;
+}
 
+#sign-form li {
+  margin-bottom: 17px;
+}
+
+#sign-form li:last-child {
+  margin-bottom: 0;
+}
+
+#sign-form .input--text {
+  width: 100%;
+  height: 40px;
+}
+
+#sign-form .caption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: center;
+}
+
+#sign-form [type="submit"] {
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
+  justify-content: center;
+}
