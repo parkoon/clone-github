@@ -79,3 +79,64 @@
      inset 0 1px 2px rgba(0,0,0,0.075), 
      0 0 5px rgba(81, 167, 232, 0.5);
  }
+
+
+/* HEADER */
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, .75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .75);
+
+    /* 브라우저마다 다르게 해석 할 수 있으므로 white와 같이 사용하지 않고 hexa 코드를 사용한다. */
+    background: #fff;
+}
+
+header .inner {
+    max-width: 980px;
+
+    /* marin 0 auto 를 사용하기 위해서는 width 가 정해져 있어야 한다. */
+    margin: 0 auto;
+    height: 78px;
+}
+
+header .menu-group {
+    display: flex;
+    /* 부모인 inner 높이에 영향을 받게된다. */
+    height: 100%;
+    align-items: center;
+
+}
+
+header .logo {
+    margin-right: 10px; 
+}
+
+header .logo a {
+    display: block;
+    background: url('../img/logo.svg');
+    width: 32px;
+    height: 32px;
+
+    /* background로 이미지를 삽입 할 경우, 대체 텍스트를 설정할 수 없으므로 a 태그의 텍스를 지워서는 안된다. */
+    /* 화면에서는 사라졌지만 구조적으로는 남아있다. */
+    /* 9999는 요소를 사라지게 하기 위한 약속된 값이다. */
+    text-indent: -9999px;
+}
+
+header .logo a:hover {
+    background: url('../img/logo_on.svg');
+}
+
+
+header .main-menu  {
+    display: flex;
+}
+
+header .main-menu li a {
+    /* inline 요소는 범위를 가질 수 없다. 따라서 block 으로 변경한다. */
+    display: block;
+    /* 여백을 확보해서 클릭을 쉽게 만들기 */
+    /* li에 주면 안되고 a 태그에 줘야한다. */
+    padding: 10px;
+    color: #3c4146;
+    text-decoration: none;;
+}
