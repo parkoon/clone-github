@@ -26,6 +26,40 @@ a {
     float: right;
 }
 
+/* SUMARRY */
+.summary {
+    
+}
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+.summary__desctiption {
+    font-size: 26px;
+    font-weight: 300;
+    color: #767676;
+    line-height: 1.5;
+}
+
+/* SECTION & INNER */
+.section {
+
+    /* inner를 사용하지 않는 경우 section 에서 absolute 가 1차적으로 걸리게 relative를 준다. */
+    position: relative;
+}
+.section .inner{
+    max-width: 980px;
+
+    /* marin 0 auto 를 사용하기 위해서는 width 가 정해져 있어야 한다. */
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    /* inner에서 absolute 가 1차적으로 걸리게 relative를 준다. */
+    position: relative;
+}
+
 /* ------- btn ------- */
 .btn {
   position: relative;
@@ -112,10 +146,6 @@ header {
 }
 
 header .inner {
-    max-width: 980px;
-
-    /* marin 0 auto 를 사용하기 위해서는 width 가 정해져 있어야 한다. */
-    margin: 0 auto;
     height: 78px;
 }
 
@@ -213,3 +243,43 @@ header .sub-menu li a {
 header .sub-menu li a:hover {
     color: #4078c0;
 }
+
+
+/* VISUAL */
+.section__visual {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+
+    /* default: top left */
+    background-position: bottom left;
+
+    /* 확대, 축소를 해도 이미지를 꽉 채워야 한다. */
+    background-size: cover;
+}
+
+.section__visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.section__visual .inner {
+    /* height 를 주기 전에 padding을 먼저 생각하자. */
+    padding: 160px 0px;
+}
+
+.section__visual .summary__title {
+    font-size: 54px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 1px 20px rgba(0, 0, 0, .75);
+}
+.section__visual .summary__description {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 1px 20px rgba(0, 0, 0, .75);
+}
+
+
